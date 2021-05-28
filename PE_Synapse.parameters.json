@@ -1,0 +1,216 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "VNet_Name": {
+            "value" : "VNet-1"
+        },
+        "VNet_Address": {
+            "value" : "10.10.0.0/16"
+        },
+        "VNet_Tags": {
+            "value": {
+                "Env" : "Testing"
+            }
+        },
+        "Subnet_Name": {
+            "value" : "Subnet-1" 
+        },
+        "Subnet_Address": {
+            "value" : "10.10.0.0/24"  
+        },
+        "Subnet_PE_Network_Policy": {
+            "value": "Disabled" 
+        },
+        "Storage_Account_Name": {
+            "value": "staccount7384"
+        },
+        "Storage_Account_Kind": {
+            "value": "StorageV2"
+        },
+        "Storage_Account_SKU_Name": {
+            "value": "Standard_ZRS"
+        },
+        "Storage_Account_SKU_Tier": {
+            "value": "Standard"
+        },
+        "Storage_Account_Access_Tier": {
+            "value": "Hot"
+        },"Storage_Account_Blob_Access": {
+            "value": true
+        },
+        "Storage_Account_HNS": {
+            "value": true
+        },
+        "Storage_Account_TLS_Version": {
+            "value": "TLS1_2"
+        },
+        "Storage_Account_Https_Traffic": {
+            "value": true
+        },
+        "Storage_Account_Tags": {
+            "value": {
+                "Env": "Testing"
+            }
+        },
+        "Storage_Account_Network_Bypass": {
+            "value": "AzureServices"
+        },
+        "Storage_Account_Network_Action": {
+            "value": "Deny"
+        },
+        "Storage_Container_Name": {
+            "value": "con-1"
+        },
+        "Storage_Container_Access": {
+            "value": "Container"
+        },
+        "Synapse_WS_Name": {
+            "value": "whoaksws"
+        },
+        "Synapse_WS_Identity": {
+            "value": "SystemAssigned"
+        },
+        "Synapse_WS_Tags": {
+            "value": {
+                "Env": "Testing"
+            }
+        },
+        "Synapse_Username": {
+            "value": "John"
+        },
+        "Synapse_Password": {
+            "value": "Synapse_12345"
+        },
+        "Synapse_Firewall_Name": {
+            "value": ["AllowAllWindowsAzureIps"]
+        },
+        "Synapse_Firewall_Start_IP_Address":{
+            "value": ["0.0.0.0"]
+        },
+        "Synapse_Firewall_End_IP_Address":{
+            "value": ["0.0.0.0"]
+        },
+        "SQL_Pool_Name": {
+            "value": ["sqlpool1"]
+        },
+        "SQL_Pool_Tags": {
+            "value": {
+                "Env": "Testing"
+            }
+        },
+        "SQL_Pool_SKU_Name": {
+            "value": ["DW100c"]
+        },
+        "SQL_Pool_Creation_Mode": {
+            "value": ["Default"]
+        },
+        "SQL_Pool_Collation": {
+            "value": ["SQL_Latin1_General_CP1_CI_AS"]
+        },
+        "Synapse_SP_Name": {
+            "value": ["sparkpool1"]
+        },
+        "Synapse_SP_Tags": {
+            "value": {
+                "Env": "Testing"
+            }
+        },
+        "Synapse_SP_Node_Size": {
+            "value": ["Small"]
+        },
+        "Synapse_SP_Node_Size_Family": {
+            "value": ["MemoryOptimized"]
+        },
+        "Synapse_SP_Version": {
+            "value": ["2.4"]
+        },
+        "Synapse_SP_AutoScale": {
+            "value": [true]
+        },
+        "Synapse_SP_Min_Node": {
+            "value": [3]
+        },
+        "Synapse_SP_Max_Node": {
+            "value": [10]
+        },
+        "Synapse_SP_AutoPause": {
+            "value": [true]
+        },
+        "Synapse_SP_Delay": {
+            "value": [15]
+        },
+        "SA_Private_DNS_Name": {
+            "value": ["privatelink.dfs.core.windows.net", "privatelink.blob.core.windows.net"]
+        },
+        "SA_Private_DNS_Tags":{
+            "value": {
+                "Env": "Testing"
+            }
+        },
+        "SA_Private_DNS_VNet_Name": {
+            "value": ["dns-dfs-vnet", "dns-blob-vnet"]
+        },
+        "SA_Private_DNS_VNet_Registration": {
+            "value": [false, false]
+        },
+        "SA_Private_DNS_VNet_Tags":{
+            "value": {
+                "Env": "Testing"
+            }
+        },
+        "SA_PE_Name": {
+            "value": ["pe-adls-dfs", "pe-adls-blob"]
+        },
+        "SA_PE_Tags": {
+            "value": {
+                "Env": "Testing"
+            }
+        },
+        "SA_PE_Service_Name": {
+            "value": ["pe-adls-dfs-connection", "pe-adls-blob-connection"]
+        },
+        "SA_PE_SubResource_Name": {
+            "value": ["dfs", "blob"]
+        },
+        "SA_PE_DNS_Zone_Config_Name": {
+            "value": ["arm-config", "arm-config2"]
+        },
+        "Synapse_Private_DNS_Name": {
+            "value": ["privatelink.sql.azuresynapse.net"]
+        },
+        "Synapse_Private_DNS_Tags":{
+            "value": {
+                "Env": "Testing"
+            }
+        },
+        "Synapse_Private_DNS_VNet_Name": {
+            "value": ["dns-sql-vnet"]
+        },
+        "Synapse_Private_DNS_VNet_Registration": {
+            "value": [false]
+        },
+        "Synapse_Private_DNS_VNet_Tags":{
+            "value": {
+                "Env": "Testing"
+            }
+        },
+        "Synapse_PE_Name": {
+            "value": ["pe-synapsews-sql"]
+        },
+        "Synapse_PE_Tags": {
+            "value": {
+                "Env": "Testing"
+            }
+        },
+        "Synapse_PE_Service_Name": {
+            "value": ["pe-synapsews-sql-connnection"]
+        },
+        "Synapse_PE_SubResource_Name": {
+            "value": ["sql"]
+        },
+        "Synapse_PE_DNS_Zone_Config_Name": {
+            "value": ["private-dns-zone-sql"]
+        }
+    }
+}
